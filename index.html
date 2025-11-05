@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Consultorio Barcala</title>
 
   <!-- Fuente moderna -->
@@ -11,41 +11,6 @@
 
   <!-- Librería de animaciones AOS -->
   <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
-<head>
-  ...
-  <style>
-    /* ...tus estilos existentes... */
-
-    /* Botones discretos dentro de las tarjetas de contacto */
-    .card.contact-item{
-      display:flex; flex-direction:column; min-height:170px;
-    }
-    .card.contact-item .btn{
-      display:inline-flex; align-items:center; gap:8px;
-      margin-top:auto; align-self:center;
-      padding:10px 12px; border-radius:10px;
-      background:#fff; color:#111827;
-      border:1px solid #e5e7eb; text-decoration:none; font-weight:600;
-      transition:background .2s,border-color .2s,transform .2s;
-    }
-    .card.contact-item .btn:hover{
-      background:#f3f4f6; border-color:#d1d5db; transform:translateY(-1px);
-    }
-
-    /* Título y especialidades */
-    .hero h1 { white-space: nowrap; font-size: clamp(2rem, 4vw, 3rem); }
-    .specializations{
-      font-size: 1.3rem;
-      color: var(--muted);
-      margin-top: 16px;
-      text-align: left;
-    }
-    @media (max-width:768px){
-      .specializations { text-align: center; font-size: 1.2rem; }
-      .hero h1 { white-space: normal; }
-    }
-  </style>
-</head>
 
   <style>
     :root {
@@ -57,12 +22,11 @@
       --muted: #6b7280;
       --border: #e5e7eb;
       --shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
-      
     }
 
     * { box-sizing: border-box; margin: 0; padding: 0; }
-
     html { scroll-behavior: smooth; }
+
     body {
       font-family: 'Inter', system-ui, sans-serif;
       line-height: 1.6;
@@ -78,7 +42,6 @@
       border-bottom: 1px solid var(--border);
       box-shadow: 0 2px 12px rgba(0, 0, 0, 0.04);
     }
-
     .header-inner {
       max-width: 1100px;
       margin: 0 auto;
@@ -87,7 +50,6 @@
       align-items: center;
       padding: 1rem;
     }
-
     nav a {
       margin-left: 20px;
       font-weight: 500;
@@ -109,23 +71,7 @@
       align-items: center;
       gap: 48px;
     }
-    .hero h1 {
-      font-size: clamp(28px, 4vw, 44px);
-      font-weight: 700;
-      margin: 0;
-    }
-    .hero-title-row{
-      display:flex;
-      align-items:center;
-      gap:16px;
-      flex-wrap:wrap;
-    }
-    .hero-title-row img{
-      width:72px;
-      height:auto;
-      border-radius:12px;
-      box-shadow: var(--shadow);
-    }
+    .hero h1 { font-size: clamp(28px, 4vw, 44px); font-weight: 700; margin: 0; }
     .hero-figure img {
       width: 100%;
       border-radius: 16px;
@@ -133,12 +79,24 @@
       box-shadow: var(--shadow);
     }
 
+    /* Título y especialidades (tus ajustes) */
+    .hero h1 { white-space: nowrap; font-size: clamp(2rem, 4vw, 3rem); }
+    .specializations{
+      font-size: 1.3rem;
+      color: var(--muted);
+      margin-top: 16px;
+      text-align: left;
+    }
+    @media (max-width:768px){
+      .specializations { text-align: center; font-size: 1.2rem; }
+      .hero h1 { white-space: normal; }
+    }
+
     section {
       max-width: 1100px;
       margin: 0 auto;
       padding: 80px 20px;
     }
-
     .section-title {
       text-align: center;
       margin-bottom: 48px;
@@ -150,7 +108,7 @@
       background: var(--surface);
       border: 1px solid var(--border);
       border-radius: 20px;
-      padding:18px;
+      padding: 18px;
       box-shadow: var(--shadow);
       transition: transform .2s ease, box-shadow .2s ease;
     }
@@ -181,18 +139,11 @@
       transition: background .2s;
     }
     .doc:hover { background: #f9fafb; }
-
     .avatar {
-      width: 72px;
-      height: 72px;
-      border-radius: 50%;
+      width: 72px; height: 72px; border-radius: 50%;
       background: linear-gradient(135deg, #eef2ff, #dbeafe);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 28px;
-      color: var(--primary);
-      flex-shrink: 0;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 28px; color: var(--primary); flex-shrink: 0;
     }
 
     .contact-grid{
@@ -202,6 +153,23 @@
     }
     .contact-item h4{ margin-bottom:6px; }
     .contact-item p{ color: var(--muted); }
+    .card.contact-item p{ margin-bottom:8px; }
+
+    /* Botones discretos dentro de las tarjetas de contacto */
+    .card.contact-item{
+      display:flex; flex-direction:column; min-height:170px;
+    }
+    .card.contact-item .btn{
+      display:inline-flex; align-items:center; gap:8px;
+      margin-top:auto; align-self:center;
+      padding:10px 12px; border-radius:10px;
+      background:#fff; color:#111827;
+      border:1px solid #e5e7eb; text-decoration:none; font-weight:600;
+      transition:background .2s,border-color .2s,transform .2s;
+    }
+    .card.contact-item .btn:hover{
+      background:#f3f4f6; border-color:#d1d5db; transform:translateY(-1px);
+    }
 
     footer {
       background: var(--surface);
@@ -229,30 +197,8 @@
     @media (max-width: 768px) {
       .hero-inner { grid-template-columns: 1fr; text-align: center; }
       nav a { margin-left: 10px; }
-      .hero-title-row{ justify-content:center; }
     }
-  
-    .btn{
-      display:inline-flex; align-items:center; gap:8px;
-      padding:10px 12px; border-radius:10px;
-      background:#ffffff; color:var(--text);
-      border:1px solid var(--border);
-      text-decoration:none; font-weight:600;
-      box-shadow:none; transition:background .2s, border-color .2s, transform .2s;
-    }
-    .btn:hover{
-      background:#f3f4f6; /* gris claro */
-      border-color:#d1d5db;
-      transform:translateY(-1px);
-    }
-    
-  
-
-
-.card.contact-item p{ margin-bottom:8px; }
-
-</style>
-  
+  </style>
 </head>
 
 <body>
@@ -268,21 +214,20 @@
     </div>
   </header>
 
-<section class="hero">
-  <div class="hero-inner">
-    <div>
-      <h1>Atención integral en salud</h1>
-      <p class="specializations">
-        <strong>Especialidades:</strong> Pedagógica · Clínica · Neurología · Psicopedagogía · Psicología
-      </p>
+  <section class="hero">
+    <div class="hero-inner">
+      <div>
+        <h1>Atención integral en salud</h1>
+        <p class="specializations">
+          <strong>Especialidades:</strong> Pedagógica · Clínica · Neurología · Psicopedagogía · Psicología
+        </p>
+      </div>
+      <div class="hero-figure">
+        <!-- Asegurate que el archivo exista en la misma carpeta y con el mismo nombre/case -->
+        <img src="./uc.png" alt="Consultorio Barcala" style="max-width:420px; border-radius:16px;">
+      </div>
     </div>
-
-    <div class="hero-figure">
-      <img src="./uc.png" alt="Consultorio Barcala" style="max-width:420px; border-radius:16px;">
-    </div>
-  </div>
-</section>
-
+  </section>
 
   <section id="servicios">
     <h2 class="section-title" data-aos="fade-up">Nuestros Servicios</h2>
@@ -292,8 +237,8 @@
         <p>Diagnóstico y tratamiento de enfermedades comunes con un enfoque integral y personalizado.</p>
       </div>
       <div class="card" data-aos="zoom-in" data-aos-delay="100">
-        <h3>Pedagogia</h3>
-        <p>Análisis y orientación del proceso de enseñanza-aprendizaje con un enfoque integral y humanista, buscando la formación plena y el desarrollo de la persona.</p>
+        <h3>Pedagogía</h3>
+        <p>Análisis y orientación del proceso de enseñanza-aprendizaje con un enfoque integral y humanista.</p>
       </div>
       <div class="card" data-aos="zoom-in" data-aos-delay="200">
         <h3>Neurología</h3>
@@ -322,89 +267,64 @@
     </div>
   </section>
 
-<!-- NUEVA SECCIÓN: CONTACTO -->
-<section id="contacto">
-  <h2 class="section-title" data-aos="fade-up">Contacto</h2>
+  <!-- NUEVA SECCIÓN: CONTACTO -->
+  <section id="contacto">
+    <h2 class="section-title" data-aos="fade-up">Contacto</h2>
+    <div class="contact-grid">
 
-  <div class="contact-grid">
+      <div class="card contact-item" data-aos="zoom-in">
+        <h4>Teléfono de Línea</h4>
+        <p>3533-2570</p>
+      </div>
 
-    <div class="card contact-item" data-aos="zoom-in">
-      <h4>Teléfono de Línea</h4>
-      <p>3533-2570</p>
+      <!-- WHATSAPP -->
+      <div class="card contact-item" data-aos="zoom-in" data-aos-delay="100">
+        <h4>WhatsApp</h4>
+        <p>+54 11-2469-9914</p>
+        <p>+54 11-3698-4389</p>
+        <a href="https://wa.me/5491124699914?text=Hola%20Consultorio%20Barcala%2C%20quisiera%20solicitar%20un%20turno."
+           target="_blank" rel="noopener noreferrer" class="btn">Enviar WhatsApp</a>
+        <p style="margin-top:10px; font-size:0.95rem;">
+          <a href="https://wa.me/5491136984389?text=Hola%20Consultorio%20Barcala%2C%20quisiera%20solicitar%20un%20turno."
+             target="_blank" rel="noopener noreferrer">Probar con el otro número</a>
+        </p>
+      </div>
+
+      <!-- EMAIL -->
+      <div class="card contact-item" data-aos="zoom-in" data-aos-delay="200">
+        <h4>Email</h4>
+        <p>Dra. Andracchi: consultorioritabarcala@gmail.com</p>
+        <p>Dr. Delgado: vconsultorio69@gmail.com</p>
+        <a href="https://mail.google.com/mail/?view=cm&fs=1&to=consultorioritabarcala@gmail.com&su=Consulta%20de%20turno&body=Hola%2C%20quisiera%20pedir%20un%20turno..."
+           target="_blank" rel="noopener noreferrer" class="btn">Escribir por Gmail</a>
+        <p style="margin-top:10px; font-size:0.95rem;">
+          <a href="mailto:consultorioritabarcala@gmail.com?subject=Consulta%20de%20turno&body=Hola%2C%20quisiera%20pedir%20un%20turno..."
+             target="_blank" rel="noopener noreferrer">O abrir en tu cliente de correo</a>
+        </p>
+      </div>
+
+      <div class="card contact-item" data-aos="zoom-in" data-aos-delay="300">
+        <h4>Dirección</h4>
+        <p>Calle Barcala 550, Ramos Mejía, La Matanza</p>
+      </div>
+
+      <div class="card contact-item" data-aos="zoom-in" data-aos-delay="400">
+        <h4>Horarios</h4>
+        <p>Lunes a Miércoles 13:30–16:00</p>
+      </div>
+
+      <div class="card" style="padding:0; overflow:hidden;">
+        <iframe
+          src="https://www.google.com/maps?q=Calle%20Barcala%20550%2C%20Ramos%20Mej%C3%ADa%2C%20La%20Matanza&output=embed"
+          width="100%" height="320" style="border:0; display:block;"
+          allowfullscreen loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+
     </div>
+  </section>
 
-    <!-- WHATSAPP -->
-    <div class="card contact-item" data-aos="zoom-in" data-aos-delay="100">
-      <h4>WhatsApp</h4>
-      <p>+54 11-2469-9914</p>
-      <p>+54 11-3698-4389</p>
-
-      <!-- Botón para el principal (usa wa.me que es el más compatible) -->
-      <a
-        href="https://wa.me/5491124699914?text=Hola%20Consultorio%20Barcala%2C%20quisiera%20solicitar%20un%20turno."
-        target="_blank" rel="noopener noreferrer" class="btn">
-        Enviar WhatsApp
-      </a>
-
-      <!-- Enlace alternativo (por si preferís el segundo número) -->
-      <p style="margin-top:10px; font-size:0.95rem;">
-        <a
-          href="https://wa.me/5491136984389?text=Hola%20Consultorio%20Barcala%2C%20quisiera%20solicitar%20un%20turno."
-          target="_blank" rel="noopener noreferrer">
-          Probar con el otro número
-        </a>
-      </p>
-    </div>
-
-    <!-- EMAIL -->
-    <div class="card contact-item" data-aos="zoom-in" data-aos-delay="200">
-      <h4>Email</h4>
-      <p>Dra. Andracchi: consultorioritabarcala@gmail.com</p>
-      <p>Dr. Delgado: vconsultorio69@gmail.com</p>
-
-      <!-- Gmail Web -->
-      <a
-        href="https://mail.google.com/mail/?view=cm&fs=1&to=consultorioritabarcala@gmail.com&su=Consulta%20de%20turno&body=Hola%2C%20quisiera%20pedir%20un%20turno..."
-        target="_blank" rel="noopener noreferrer" class="btn">
-        Escribir por Gmail
-      </a>
-
-      <!-- Mailto alternativo (cliente por defecto) -->
-      <p style="margin-top:10px; font-size:0.95rem;">
-        <a
-          href="mailto:consultorioritabarcala@gmail.com?subject=Consulta%20de%20turno&body=Hola%2C%20quisiera%20pedir%20un%20turno..."
-          target="_blank" rel="noopener noreferrer">
-          O abrir en tu cliente de correo
-        </a>
-      </p>
-    </div>
-
-    <div class="card contact-item" data-aos="zoom-in" data-aos-delay="300">
-      <h4>Dirección</h4>
-      <p>Calle Barcala 550, Ramos Mejía, La Matanza</p>
-    </div>
-
-    <div class="card contact-item" data-aos="zoom-in" data-aos-delay="400">
-      <h4>Horarios</h4>
-      <p>Lunes a Miércoles 13:30–16:00</p>
-    </div>
-
-    <div class="card" style="padding:0; overflow:hidden;">
-      <iframe
-        src="https://www.google.com/maps?q=Calle%20Barcala%20550%2C%20Ramos%20Mej%C3%ADa%2C%20La%20Matanza&output=embed"
-        width="100%" height="320" style="border:0; display:block;"
-        allowfullscreen="" loading="lazy"
-        referrerpolicy="no-referrer-when-downgrade"></iframe>
-    </div>
-  </div>
-</section>
-
-  <div class="footer-inner" data-aos="fade-up">
-    <p>&copy; 2025 Consultorio Barcala. Todos los derechos reservados.</p>
-    <a href="#inicio">Volver arriba ↑</a>
-  </div>
-</footer>
-
+  <footer>
     <div class="footer-inner" data-aos="fade-up">
       <p>&copy; 2025 Consultorio Barcala. Todos los derechos reservados.</p>
       <a href="#inicio">Volver arriba ↑</a>
@@ -414,19 +334,5 @@
   <!-- Scripts -->
   <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
   <script> AOS.init({ duration: 700, once: true, easing: 'ease-out-quart' }); </script>
-
-
-<script>
-document.querySelectorAll('.btn').forEach(btn => {
-  btn.addEventListener('click', function(e) {
-    e.preventDefault();
-    const href = this.getAttribute('href');
-    if (href) window.open(href, '_blank', 'noopener');
-  });
-});
-</script>
-
 </body>
 </html>
-
-
